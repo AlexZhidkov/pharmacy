@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ph-suite-dev": {
+      "hosting": {
+        "pharmacy": [
+          "ph-suite-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ph-suite-dev"
+  }
+}
