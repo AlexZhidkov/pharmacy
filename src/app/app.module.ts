@@ -39,6 +39,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { AuthFirebaseuiAvatarComponent } from "./auth-firebaseui-avatar/auth-firebaseui-avatar.component";
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { WebbitHomeComponent } from './webbit-home/webbit-home.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HomeComponent } from './home/home.component';
     AuthFirebaseuiAvatarComponent,
     LoginComponent,
     HomeComponent,
+    WebbitHomeComponent,
   ],
   imports: [
     BrowserModule,

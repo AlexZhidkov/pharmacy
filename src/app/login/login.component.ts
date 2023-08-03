@@ -5,7 +5,6 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Analytics, logEvent, setUserId } from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +13,6 @@ import { Analytics, logEvent, setUserId } from '@angular/fire/analytics';
 })
 export class LoginComponent {
   private auth: Auth = inject(Auth);
-  private analytics: Analytics = inject(Analytics)
   private firestore: Firestore = inject(Firestore);
   public name: string = '';
   public email: string = '';
@@ -94,8 +92,6 @@ export class LoginComponent {
   }
 
   onSuccess(user: User): void {
-    setUserId(this.analytics, user.uid);
-    logEvent(this.analytics, 'login', { uid: user.uid, providerId: user.providerData[0].providerId })
     const dbUserRef = doc(this.firestore, 'users', user.uid);
     getDoc(dbUserRef).then((doc) => {
       if (doc.exists()) {
