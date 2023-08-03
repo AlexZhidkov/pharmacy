@@ -38,12 +38,14 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { AuthFirebaseuiAvatarComponent } from "./auth-firebaseui-avatar/auth-firebaseui-avatar.component";
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthFirebaseuiAvatarComponent,
     LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
